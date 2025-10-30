@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HUB Amazoom - Conectando o Futuro da Inovação na Amazônia</title>
+  <meta name="description"
+    content="Ecossistema de inovação que conecta startups, empresas e talentos na Amazônia. Coworking, aceleração, mentoria e programas de desenvolvimento para empreendedores." />
+  <meta name="author" content="HUB Amazoom" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="icon" href="/lovable-uploads/6ab0c7cc-a6be-409b-aff8-8dc7291aae69.png?v=1" type="image/png">
+  <link rel="shortcut icon" href="/lovable-uploads/6ab0c7cc-a6be-409b-aff8-8dc7291aae69.png?v=1" type="image/png">
+  <link rel="apple-touch-icon" href="/lovable-uploads/6ab0c7cc-a6be-409b-aff8-8dc7291aae69.png?v=1" sizes="180x180">
+  <link rel="icon" type="image/png" sizes="32x32" href="/lovable-uploads/6ab0c7cc-a6be-409b-aff8-8dc7291aae69.png?v=1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/lovable-uploads/6ab0c7cc-a6be-409b-aff8-8dc7291aae69.png?v=1">
+  <link rel="manifest"
+    href="data:application/json,{&quot;icons&quot;:[{&quot;src&quot;:&quot;/lovable-uploads/6ab0c7cc-a6be-409b-aff8-8dc7291aae69.png&quot;,&quot;sizes&quot;:&quot;512x512&quot;,&quot;type&quot;:&quot;image/png&quot;}]}">
+
+  <meta property="og:title" content="HUB Amazoom - Conectando o Futuro da Inovação na Amazônia" />
+  <meta property="og:description"
+    content="Ecossistema de inovação que conecta startups, empresas e talentos na Amazônia. Coworking, aceleração, mentoria e programas de desenvolvimento para empreendedores." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@lovable_dev" />
+  <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+  <script type="module" crossorigin src="/assets/index-CGuH8YYo.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/vendor-D6c-Jqks.js">
+  <link rel="modulepreload" crossorigin href="/assets/ui-3dZ77hvN.js">
+  <link rel="modulepreload" crossorigin href="/assets/icons-CUeChpmy.js">
+  <link rel="modulepreload" crossorigin href="/assets/supabase-kH73mCB1.js">
+  <link rel="stylesheet" crossorigin href="/assets/index-DQERlBm9.css">
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <!-- Chatbot TemplyIA -->
+  <style data-filename="pages/EmbeddableChatbot" data-linenumber="55"
+    data-visual-selector-id="pages/EmbeddableChatbot55">
+    /* Container do Chatbot */
+    #temply-chatbot {
+      position: fixed;
+      bottom: 80px;
+      /* espaço para o botão principal */
+      right: 20px;
+      width: 550px;
+      height: 90vh;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      z-index: 9999;
+      transition: all 0.3s ease-in-out;
+      display: none;
+      /* começa fechado */
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      #temply-chatbot {
+        width: 90%;
+        height: 400px;
+        /* Alterado de 70vh para 400px */
+        bottom: 70px;
+        right: 5%;
+      }
+    }
+
+    /* Botão principal do chatbot */
+    #chatbot-toggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #00fe91;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 70px;
+      height: 70px;
+      font-size: 32px;
+      cursor: pointer;
+      z-index: 10000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s;
+    }
+
+    #chatbot-toggle:hover {
+      transform: scale(1.1);
+    }
+
+    /* Botão de minimizar */
+    #chatbot-minimize {
+      position: fixed;
+      bottom: 850px;
+      /* acima do botão flutuante */
+      right: 25px;
+      background: #FF4B4B;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+      font-size: 20px;
+      cursor: pointer;
+      z-index: 10001;
+      display: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      #chatbot-minimize {
+        bottom: 470px;
+        right: 5%;
+        /* Alterado de 8% para 5% */
+      }
+    }
+  </style>
+
+  <!-- Botão principal do chat -->
+  <button data-filename="pages/EmbeddableChatbot" data-linenumber="133"
+    data-visual-selector-id="pages/EmbeddableChatbot133" id="chatbot-toggle">👋</button>
+
+  <!-- Iframe do Chatbot -->
+  <iframe data-filename="pages/EmbeddableChatbot" data-linenumber="136"
+    data-visual-selector-id="pages/EmbeddableChatbot136" id="temply-chatbot"
+    src="https://temply-5680f369.base44.app/PublicChat?businessId=68a8b5b5a21b859f6e9a679a"
+    title="Chat TemplyIA"></iframe>
+
+  <!-- Botão de minimizar -->
+  <button data-filename="pages/EmbeddableChatbot" data-linenumber="142"
+    data-visual-selector-id="pages/EmbeddableChatbot142" id="chatbot-minimize">✖</button>
+
+  <script data-filename="pages/EmbeddableChatbot" data-linenumber="144"
+    data-visual-selector-id="pages/EmbeddableChatbot144">
+      (function () { // Wrap in IIFE
+        const chatbot = document.getElementById('temply-chatbot');
+        const toggleBtn = document.getElementById('chatbot-toggle');
+        const minimizeBtn = document.getElementById('chatbot-minimize');
+
+        // Abrir chatbot
+        toggleBtn.addEventListener('click', () => {
+          chatbot.style.display = "block";
+          minimizeBtn.style.display = "block";
+          toggleBtn.style.display = "none"; // esconde o botão principal
+        });
+
+        // Minimizar chatbot
+        minimizeBtn.addEventListener('click', () => {
+          chatbot.style.display = "none";
+          minimizeBtn.style.display = "none";
+          toggleBtn.style.display = "flex"; // mostra botão principal
+        });
+      })(); // End IIFE
+    </script>
+  <!-- Fim do Código do Chatbot TemplyIA -->
+
+</body>
+
+</html>
